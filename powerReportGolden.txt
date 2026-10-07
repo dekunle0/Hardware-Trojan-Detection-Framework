@@ -1,0 +1,232 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Sun Aug 30 21:51:46 2026
+| Host             : HERMES running 64-bit major release  (build 9200)
+| Command          : report_power -file powerReportGolden.txt
+| Design           : AESTrojanDetectionFramework
+| Device           : xc7a35tcpg236-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 697.194 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 696.712                           |
+| Device Static (W)        | 0.483                             |
+| Effective TJA (C/W)      | 5.0                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | goldenCore.saif                   |
+| Design Nets Matched      | 28%   (1986/7191)                 |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |   355.928 |     6935 |       --- |             --- |
+|   LUT as Logic |   351.641 |     5037 |     20800 |           24.22 |
+|   F7/F8 Muxes  |     4.251 |     1512 |     32600 |            4.64 |
+|   Register     |     0.037 |      279 |     41600 |            0.67 |
+|   Others       |     0.000 |        3 |       --- |             --- |
+| Signals        |   340.783 |     4064 |       --- |             --- |
+| Static Power   |     0.483 |          |           |                 |
+| Total          |   697.194 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |   697.052 |     696.712 |      0.341 |
+| Vccaux    |       1.800 |     0.053 |       0.000 |      0.053 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.010 |       0.000 |      0.010 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                             |
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks         | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                                    |
+| Internal nodes activity     | High       | User specified more than 25% of internal nodes |                                                                                                                    |
+| Device models               | High       | Device models are Production                   |                                                                                                                    |
+|                             |            |                                                |                                                                                                                    |
+| Overall confidence level    | Low        |                                                |                                                                                                                    |
++-----------------------------+------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 5.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------+-----------+
+| Name                                           | Power (W) |
++------------------------------------------------+-----------+
+| AESTrojanDetectionFramework                    |   696.711 |
+|   goldenCore                                   |     0.037 |
+|     mix                                        |     0.010 |
+|     sub                                        |     0.007 |
+|       SubTableLoop[103].s                      |    <0.001 |
+|       SubTableLoop[111].s                      |    <0.001 |
+|       SubTableLoop[119].s                      |    <0.001 |
+|       SubTableLoop[127].s                      |    <0.001 |
+|       SubTableLoop[15].s                       |    <0.001 |
+|       SubTableLoop[23].s                       |    <0.001 |
+|       SubTableLoop[31].s                       |    <0.001 |
+|       SubTableLoop[39].s                       |    <0.001 |
+|       SubTableLoop[47].s                       |    <0.001 |
+|       SubTableLoop[55].s                       |    <0.001 |
+|       SubTableLoop[63].s                       |    <0.001 |
+|       SubTableLoop[71].s                       |    <0.001 |
+|       SubTableLoop[79].s                       |    <0.001 |
+|       SubTableLoop[7].s                        |    <0.001 |
+|       SubTableLoop[87].s                       |    <0.001 |
+|       SubTableLoop[95].s                       |    <0.001 |
+|   keyExp                                       |   673.978 |
+|     KeyExpansionRoundLoop[0].keyExpansionRound |   644.910 |
+|       SubWordLoop[0].subTable                  |   160.816 |
+|       SubWordLoop[1].subTable                  |   162.984 |
+|       SubWordLoop[2].subTable                  |   161.031 |
+|       SubWordLoop[3].subTable                  |   160.078 |
+|     KeyExpansionRoundLoop[1].keyExpansionRound |     1.149 |
+|       SubWordLoop[0].subTable                  |     0.334 |
+|       SubWordLoop[1].subTable                  |     0.301 |
+|       SubWordLoop[2].subTable                  |     0.281 |
+|       SubWordLoop[3].subTable                  |     0.233 |
+|     KeyExpansionRoundLoop[2].keyExpansionRound |     1.630 |
+|       SubWordLoop[0].subTable                  |     0.412 |
+|       SubWordLoop[1].subTable                  |     0.414 |
+|       SubWordLoop[2].subTable                  |     0.407 |
+|       SubWordLoop[3].subTable                  |     0.397 |
+|     KeyExpansionRoundLoop[3].keyExpansionRound |     2.412 |
+|       SubWordLoop[0].subTable                  |     0.568 |
+|       SubWordLoop[1].subTable                  |     0.679 |
+|       SubWordLoop[2].subTable                  |     0.641 |
+|       SubWordLoop[3].subTable                  |     0.524 |
+|     KeyExpansionRoundLoop[4].keyExpansionRound |     2.976 |
+|       SubWordLoop[0].subTable                  |     0.782 |
+|       SubWordLoop[1].subTable                  |     0.692 |
+|       SubWordLoop[2].subTable                  |     0.737 |
+|       SubWordLoop[3].subTable                  |     0.766 |
+|     KeyExpansionRoundLoop[5].keyExpansionRound |     4.086 |
+|       SubWordLoop[0].subTable                  |     1.148 |
+|       SubWordLoop[1].subTable                  |     0.979 |
+|       SubWordLoop[2].subTable                  |     1.031 |
+|       SubWordLoop[3].subTable                  |     0.927 |
+|     KeyExpansionRoundLoop[6].keyExpansionRound |     5.281 |
+|       SubWordLoop[0].subTable                  |     1.425 |
+|       SubWordLoop[1].subTable                  |     1.294 |
+|       SubWordLoop[2].subTable                  |     1.314 |
+|       SubWordLoop[3].subTable                  |     1.248 |
+|     KeyExpansionRoundLoop[7].keyExpansionRound |     4.414 |
+|       SubWordLoop[0].subTable                  |     1.158 |
+|       SubWordLoop[1].subTable                  |     1.031 |
+|       SubWordLoop[2].subTable                  |     1.050 |
+|       SubWordLoop[3].subTable                  |     1.174 |
+|     KeyExpansionRoundLoop[8].keyExpansionRound |     2.319 |
+|       SubWordLoop[0].subTable                  |     0.546 |
+|       SubWordLoop[1].subTable                  |     0.569 |
+|       SubWordLoop[2].subTable                  |     0.586 |
+|       SubWordLoop[3].subTable                  |     0.618 |
+|     KeyExpansionRoundLoop[9].keyExpansionRound |     4.802 |
+|       SubWordLoop[0].subTable                  |     1.232 |
+|       SubWordLoop[1].subTable                  |     1.258 |
+|       SubWordLoop[2].subTable                  |     1.100 |
+|       SubWordLoop[3].subTable                  |     1.211 |
+|   sensingUnit                                  |    <0.001 |
+|   trojanCore                                   |    22.695 |
+|     mix                                        |     4.716 |
+|     sub                                        |     3.155 |
+|       SubTableLoop[103].s                      |     0.156 |
+|       SubTableLoop[111].s                      |     0.217 |
+|       SubTableLoop[119].s                      |     0.253 |
+|       SubTableLoop[127].s                      |     0.167 |
+|       SubTableLoop[15].s                       |     0.220 |
+|       SubTableLoop[23].s                       |     0.171 |
+|       SubTableLoop[31].s                       |     0.183 |
+|       SubTableLoop[39].s                       |     0.217 |
+|       SubTableLoop[47].s                       |     0.206 |
+|       SubTableLoop[55].s                       |     0.153 |
+|       SubTableLoop[63].s                       |     0.206 |
+|       SubTableLoop[71].s                       |     0.192 |
+|       SubTableLoop[79].s                       |     0.203 |
+|       SubTableLoop[7].s                        |     0.267 |
+|       SubTableLoop[87].s                       |     0.172 |
+|       SubTableLoop[95].s                       |     0.170 |
++------------------------------------------------+-----------+
+
+

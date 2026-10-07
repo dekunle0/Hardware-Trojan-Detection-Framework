@@ -1,0 +1,523 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Aug 30 20:47:47 2026
+# Process ID: 10512
+# Current directory: C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.runs/synth_1
+# Command line: vivado.exe -log AESTrojanDetectionFramework.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AESTrojanDetectionFramework.tcl
+# Log file: C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.runs/synth_1/AESTrojanDetectionFramework.vds
+# Journal file: C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AESTrojanDetectionFramework.tcl -notrace
+Command: synth_design -top AESTrojanDetectionFramework -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11040 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 336.672 ; gain = 99.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AESTrojanDetectionFramework' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESTrojanDetectionFramework.v:3]
+INFO: [Synth 8-6157] synthesizing module 'KeyExpansion' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/KeyExpansion.v:44]
+	Parameter Nk bound to: 4 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+	Parameter rounds bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'KeyExpansionRound' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/KeyExpansion.v:1]
+	Parameter Nk bound to: 4 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SubTable' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/SubTable.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SubTable' (1#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/SubTable.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyExpansionRound' (2#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/KeyExpansion.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyExpansion' (3#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/KeyExpansion.v:44]
+INFO: [Synth 8-6157] synthesizing module 'AESEncrypt' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESEncrypt.v:3]
+	Parameter Nk bound to: 4 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+	Parameter enableTrojan bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SubBytes' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/SubBytes.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SubBytes' (4#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/SubBytes.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ShiftRows' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/ShiftRows.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ShiftRows' (5#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/ShiftRows.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MixColumns' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/MixColumns.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MixColumns' (6#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/MixColumns.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AddRoundKey' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AddRoundKey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AddRoundKey' (7#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AddRoundKey.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'AESEncrypt' (8#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESEncrypt.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AESEncrypt__parameterized0' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESEncrypt.v:3]
+	Parameter Nk bound to: 4 - type: integer 
+	Parameter Nr bound to: 10 - type: integer 
+	Parameter enableTrojan bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AESEncrypt__parameterized0' (8#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESEncrypt.v:3]
+INFO: [Synth 8-6157] synthesizing module 'PathDelayDetector' [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/PathDelayDetector.v:3]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PathDelayDetector' (9#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/PathDelayDetector.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AESTrojanDetectionFramework' (10#1) [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.srcs/sources_1/new/AESTrojanDetectionFramework.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 391.176 ; gain = 154.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 391.176 ; gain = 154.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 391.176 ; gain = 154.500
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/Device.xdc]
+Finished Parsing XDC File [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/Device.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/Device.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AESTrojanDetectionFramework_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AESTrojanDetectionFramework_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 730.445 ; gain = 1.461
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 730.445 ; gain = 493.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 730.445 ; gain = 493.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 730.445 ; gain = 493.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "roundConstantStart8" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 730.445 ; gain = 493.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'goldenCore' (AESEncrypt) to 'goldenCore2'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 4     
+	   3 Input     32 Bit         XORs := 10    
+	   2 Input     32 Bit         XORs := 30    
+	   2 Input      8 Bit         XORs := 52    
+	   3 Input      8 Bit         XORs := 14    
+	   5 Input      8 Bit         XORs := 6     
+	   4 Input      8 Bit         XORs := 10    
++---Registers : 
+	              128 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 32    
+	   2 Input      6 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module KeyExpansionRound 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module MixColumns 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 26    
+	   3 Input      8 Bit         XORs := 7     
+	   5 Input      8 Bit         XORs := 3     
+	   4 Input      8 Bit         XORs := 5     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 16    
+Module AddRoundKey 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module AESEncrypt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+Module AESEncrypt__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 3     
+Module PathDelayDetector 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (controlUnit/alarm_reg)
+WARNING: [Synth 8-3332] Sequential element (alarm_reg) is unused and will be removed from module PathDelayDetector.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 779.082 ; gain = 542.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+---------------------------------+---------------+----------------+
+|Module Name       | RTL Object                      | Depth x Width | Implemented As | 
++------------------+---------------------------------+---------------+----------------+
+|SubTable          | subByte                         | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[3].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[3].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[3].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[3].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[3].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[0].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[1].subTable/subByte | 256x8         | LUT            | 
+|KeyExpansionRound | SubWordLoop[2].subTable/subByte | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[15].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[23].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[31].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[39].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[47].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[55].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[71].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[79].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[87].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[95].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[103].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[111].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[119].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[127].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[7].s/subByte       | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[15].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[23].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[31].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[39].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[47].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[55].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[63].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[71].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[79].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[87].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[95].s/subByte      | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[103].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[111].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[119].s/subByte     | 256x8         | LUT            | 
+|SubBytes          | SubTableLoop[127].s/subByte     | 256x8         | LUT            | 
++------------------+---------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:13 . Memory (MB): peak = 779.082 ; gain = 542.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:17 . Memory (MB): peak = 779.082 ; gain = 542.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:25 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:27 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:27 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:41 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:41 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:41 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     7|
+|2     |LUT2  |   308|
+|3     |LUT3  |    67|
+|4     |LUT4  |   234|
+|5     |LUT5  |   820|
+|6     |LUT6  |  3705|
+|7     |MUXF7 |  1232|
+|8     |MUXF8 |   280|
+|9     |FDCE  |   272|
+|10    |FDPE  |     7|
++------+------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------+---------------------------+------+
+|      |Instance                                         |Module                     |Cells |
++------+-------------------------------------------------+---------------------------+------+
+|1     |top                                              |                           |  6932|
+|2     |  sensingUnit                                    |PathDelayDetector          |     1|
+|3     |  goldenCore                                     |AESEncrypt                 |  1575|
+|4     |    sub                                          |SubBytes_65                |   384|
+|5     |      \SubTableLoop[103].s                       |SubTable_66                |    24|
+|6     |      \SubTableLoop[111].s                       |SubTable_67                |    24|
+|7     |      \SubTableLoop[119].s                       |SubTable_68                |    24|
+|8     |      \SubTableLoop[127].s                       |SubTable_69                |    24|
+|9     |      \SubTableLoop[15].s                        |SubTable_70                |    24|
+|10    |      \SubTableLoop[23].s                        |SubTable_71                |    24|
+|11    |      \SubTableLoop[31].s                        |SubTable_72                |    24|
+|12    |      \SubTableLoop[39].s                        |SubTable_73                |    24|
+|13    |      \SubTableLoop[47].s                        |SubTable_74                |    24|
+|14    |      \SubTableLoop[55].s                        |SubTable_75                |    24|
+|15    |      \SubTableLoop[63].s                        |SubTable_76                |    24|
+|16    |      \SubTableLoop[71].s                        |SubTable_77                |    24|
+|17    |      \SubTableLoop[79].s                        |SubTable_78                |    24|
+|18    |      \SubTableLoop[7].s                         |SubTable_79                |    24|
+|19    |      \SubTableLoop[87].s                        |SubTable_80                |    24|
+|20    |      \SubTableLoop[95].s                        |SubTable_81                |    24|
+|21    |    mix                                          |MixColumns_64              |   144|
+|22    |  keyExp                                         |KeyExpansion               |  3712|
+|23    |    \KeyExpansionRoundLoop[0].keyExpansionRound  |KeyExpansionRound          |  3252|
+|24    |      \SubWordLoop[0].subTable                   |SubTable_60                |   813|
+|25    |      \SubWordLoop[1].subTable                   |SubTable_61                |   813|
+|26    |      \SubWordLoop[2].subTable                   |SubTable_62                |   813|
+|27    |      \SubWordLoop[3].subTable                   |SubTable_63                |   813|
+|28    |    \KeyExpansionRoundLoop[1].keyExpansionRound  |KeyExpansionRound_15       |    72|
+|29    |      \SubWordLoop[0].subTable                   |SubTable_56                |    18|
+|30    |      \SubWordLoop[1].subTable                   |SubTable_57                |    18|
+|31    |      \SubWordLoop[2].subTable                   |SubTable_58                |    18|
+|32    |      \SubWordLoop[3].subTable                   |SubTable_59                |    18|
+|33    |    \KeyExpansionRoundLoop[2].keyExpansionRound  |KeyExpansionRound_16       |    48|
+|34    |      \SubWordLoop[0].subTable                   |SubTable_52                |    12|
+|35    |      \SubWordLoop[1].subTable                   |SubTable_53                |    12|
+|36    |      \SubWordLoop[2].subTable                   |SubTable_54                |    12|
+|37    |      \SubWordLoop[3].subTable                   |SubTable_55                |    12|
+|38    |    \KeyExpansionRoundLoop[3].keyExpansionRound  |KeyExpansionRound_17       |    48|
+|39    |      \SubWordLoop[0].subTable                   |SubTable_48                |    12|
+|40    |      \SubWordLoop[1].subTable                   |SubTable_49                |    12|
+|41    |      \SubWordLoop[2].subTable                   |SubTable_50                |    12|
+|42    |      \SubWordLoop[3].subTable                   |SubTable_51                |    12|
+|43    |    \KeyExpansionRoundLoop[4].keyExpansionRound  |KeyExpansionRound_18       |    48|
+|44    |      \SubWordLoop[0].subTable                   |SubTable_44                |    12|
+|45    |      \SubWordLoop[1].subTable                   |SubTable_45                |    12|
+|46    |      \SubWordLoop[2].subTable                   |SubTable_46                |    12|
+|47    |      \SubWordLoop[3].subTable                   |SubTable_47                |    12|
+|48    |    \KeyExpansionRoundLoop[5].keyExpansionRound  |KeyExpansionRound_19       |    48|
+|49    |      \SubWordLoop[0].subTable                   |SubTable_40                |    12|
+|50    |      \SubWordLoop[1].subTable                   |SubTable_41                |    12|
+|51    |      \SubWordLoop[2].subTable                   |SubTable_42                |    12|
+|52    |      \SubWordLoop[3].subTable                   |SubTable_43                |    12|
+|53    |    \KeyExpansionRoundLoop[6].keyExpansionRound  |KeyExpansionRound_20       |    48|
+|54    |      \SubWordLoop[0].subTable                   |SubTable_36                |    12|
+|55    |      \SubWordLoop[1].subTable                   |SubTable_37                |    12|
+|56    |      \SubWordLoop[2].subTable                   |SubTable_38                |    12|
+|57    |      \SubWordLoop[3].subTable                   |SubTable_39                |    12|
+|58    |    \KeyExpansionRoundLoop[7].keyExpansionRound  |KeyExpansionRound_21       |    48|
+|59    |      \SubWordLoop[0].subTable                   |SubTable_32                |    12|
+|60    |      \SubWordLoop[1].subTable                   |SubTable_33                |    12|
+|61    |      \SubWordLoop[2].subTable                   |SubTable_34                |    12|
+|62    |      \SubWordLoop[3].subTable                   |SubTable_35                |    12|
+|63    |    \KeyExpansionRoundLoop[8].keyExpansionRound  |KeyExpansionRound_22       |    36|
+|64    |      \SubWordLoop[0].subTable                   |SubTable_28                |     9|
+|65    |      \SubWordLoop[1].subTable                   |SubTable_29                |     9|
+|66    |      \SubWordLoop[2].subTable                   |SubTable_30                |     9|
+|67    |      \SubWordLoop[3].subTable                   |SubTable_31                |     9|
+|68    |    \KeyExpansionRoundLoop[9].keyExpansionRound  |KeyExpansionRound_23       |    64|
+|69    |      \SubWordLoop[0].subTable                   |SubTable_24                |    16|
+|70    |      \SubWordLoop[1].subTable                   |SubTable_25                |    16|
+|71    |      \SubWordLoop[2].subTable                   |SubTable_26                |    16|
+|72    |      \SubWordLoop[3].subTable                   |SubTable_27                |    16|
+|73    |  trojanCore                                     |AESEncrypt__parameterized0 |  1644|
+|74    |    sub                                          |SubBytes                   |   384|
+|75    |      \SubTableLoop[103].s                       |SubTable                   |    24|
+|76    |      \SubTableLoop[111].s                       |SubTable_0                 |    24|
+|77    |      \SubTableLoop[119].s                       |SubTable_1                 |    24|
+|78    |      \SubTableLoop[127].s                       |SubTable_2                 |    24|
+|79    |      \SubTableLoop[15].s                        |SubTable_3                 |    24|
+|80    |      \SubTableLoop[23].s                        |SubTable_4                 |    24|
+|81    |      \SubTableLoop[31].s                        |SubTable_5                 |    24|
+|82    |      \SubTableLoop[39].s                        |SubTable_6                 |    24|
+|83    |      \SubTableLoop[47].s                        |SubTable_7                 |    24|
+|84    |      \SubTableLoop[55].s                        |SubTable_8                 |    24|
+|85    |      \SubTableLoop[63].s                        |SubTable_9                 |    24|
+|86    |      \SubTableLoop[71].s                        |SubTable_10                |    24|
+|87    |      \SubTableLoop[79].s                        |SubTable_11                |    24|
+|88    |      \SubTableLoop[7].s                         |SubTable_12                |    24|
+|89    |      \SubTableLoop[87].s                        |SubTable_13                |    24|
+|90    |      \SubTableLoop[95].s                        |SubTable_14                |    24|
+|91    |    mix                                          |MixColumns                 |   148|
++------+-------------------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:41 . Memory (MB): peak = 914.543 ; gain = 677.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:32 . Memory (MB): peak = 914.543 ; gain = 338.598
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:41 . Memory (MB): peak = 914.543 ; gain = 677.867
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1512 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:47 . Memory (MB): peak = 914.543 ; gain = 690.770
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/AMEZ/Desktop/Final Year Project/AES Trojan Detection Framework/AES Trojan Detection Framework.runs/synth_1/AESTrojanDetectionFramework.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AESTrojanDetectionFramework_utilization_synth.rpt -pb AESTrojanDetectionFramework_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 914.543 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 30 20:49:43 2026...

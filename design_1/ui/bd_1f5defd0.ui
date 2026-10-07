@@ -1,0 +1,13 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -y 670 -defaultsOSRD
+preplace inst pcie_7x_0 -pg 1 -lvl 1 -y 250 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 0 2 0 600 360
+levelinfo -pg 1 -20 180 380 -top -100 -bot 740
+",
+}
+{
+   da_clkrst_cnt: "1",
+}
